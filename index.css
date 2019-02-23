@@ -1,0 +1,400 @@
+/*
+#294234 -darker green
+#445d51 -darkgreen
+#97bda1 -light green
+#EAF9F0 -rly light green
+
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;;
+	line-height: 1.6;
+}
+
+#container {
+	width: 100%;
+	display: grid;
+	grid-template-rows: 100vh 100vh 100vh 400vh auto;
+	grid-template-areas: 
+		"landing"
+		"intro"
+		"info"
+		"products"
+		"preorder"
+		"footer";
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.nextslide {
+	border-radius: 50%;
+	font-size: 120%;
+	width: 3em;
+	height: 3em;
+	background-color: transparent;
+	color: #97bda1;
+	border: 2px solid #445d51;
+}
+
+.nextslide:hover {
+	background-color: rgb(199, 196, 196, 0.25);
+}
+
+
+h2 {
+	font-family: 'Staatliches', cursive;
+	font-size: 200%;
+}
+
+
+
+/* LANDING */
+
+#landing-container {
+	background-image: url('https://www.sciencenewsforstudents.org/sites/default/files/2017/05/main/blogposts/860_main_library_bacteria.png');
+	background-attachment: fixed;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 5;
+	grid-area: landing;
+	display: grid;
+	grid-template-rows: 4fr auto 3em auto 5fr;
+	grid-template-columns: 1fr minmax(200px, 6fr) 1fr;
+	grid-template-areas: 
+		". . ."
+		". logo ."
+		". . ."
+		". text ."
+		". . .";
+	text-align: center;
+}
+
+@media (min-width: 600px){
+	#landing-container {
+		grid-template-columns: 1fr minmax(200px, 1fr) 1fr;
+	}
+}
+
+#landing-logo-container {
+	grid-area: logo;
+}
+
+#landing-logo {
+	width: 100%;
+}
+
+#landing-text-container {
+ 	grid-area: text;
+ 	color: white;
+}
+
+#landing-text {
+	margin-bottom: 2.5em;
+	font-size: 120%;
+	color: #97bda1;
+}
+
+#landing-button {
+	
+}
+
+/* INTRO */
+
+#intro-container {
+	background-image: url('https://image.redbull.com/rbcom/010/2015-07-27/1331737542701_2/0100/0/1/moon-hill-natural-bridge-in-china.jpg');
+	background-attachment: fixed;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-row: intro;
+	z-index: 6;
+	display: grid;
+	grid-template-columns: 1fr minmax(300px, 4fr) 1fr;
+	grid-template-rows: 1fr 3fr minmax(1em, 1fr) 3fr 2em 1fr ;
+	grid-template-areas:
+		". . ."
+		". partone ."
+		". . ."
+		". parttwo ."
+		". . ."
+		". button .";
+}
+
+@media (min-width: 600px){
+	#intro-container{
+		grid-template-columns: 1fr minmax(250px, 3fr) minmax(1em, 1fr) minmax(250px, 3fr) 1fr;
+		grid-template-rows: 1fr 1fr minmax(auto, 2fr) 1fr 1em 1fr;
+		grid-template-areas: 
+			". . . . . "
+			". partone . . ."
+			". partone . parttwo ."
+			". ..... . parttwo ."
+			". . . . ."
+			". . button . .";
+	}
+}
+
+#intro-button {
+	grid-area: button;
+	justify-self: center;
+	color: #97bda1;
+	border: 2px solid #97bda1;
+}
+
+#part1-container{
+	grid-area: partone;
+}
+
+@media (max-width: 600px){
+	.intro-card p {
+		font-size: 100%!important;
+	}
+	
+	#info-text p{
+	font-size: 100%!important;
+}
+}
+
+#part2-container{
+	grid-area: parttwo;
+}
+
+.intro-card {
+	background-color: white;
+	border-radius: 0px;
+	-webkit-box-shadow: 6px 11px 20px 6px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 6px 11px 20px 6px rgba(0, 0, 0, 0.35);
+	box-shadow: 6px 11px 20px 6px rgba(0, 0, 0, 0.35);
+	display: grid;
+	grid-template-rows: 1fr auto 1em auto 1fr;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: hidden;
+	padding: 1em;
+	color: #445d51;
+}
+
+.intro-card h2 {
+	margin: 0;
+	grid-row: 2 / 3;
+}
+
+.intro-card p {
+	margin: 0;
+	font-size: 125%;
+	grid-row: 4 / 5;
+}
+
+/* INFO */
+
+
+#info-container {
+	background-image: url('https://www.chroniclebooks.com/blog/wp-content/uploads/books-1.jpg');
+	background-attachment: fixed;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	grid-area: info;
+	z-index: 6;
+	display: grid;
+	grid-template-rows: 1fr 6fr 2em 1fr;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	width: 100%;
+}
+
+#info-text {
+	grid-row: 2 / 3;
+	text-align: center;
+	background-color: white;
+	padding: 1em;
+	padding-top: 0;
+	color: #445d51;
+	font-size: 100%;
+}
+
+#info-text h2{
+	color: #445d51;
+}
+
+#info-text p{
+	font-size: 125%;
+}
+
+#info-button {
+	grid-row: 4 / 5;
+	justify-self: center;
+	color: #445d51;
+}
+
+/*  PRODUCTS  */
+
+#product-container {
+	grid-area: products;
+	z-index: 5;
+	text-align: center;
+	display: grid;
+	background-color: white;
+	grid-template-rows: repeat(8, 50vh);
+	grid-template-columns: 100%;
+	grid-template-areas: 
+		"textA"
+		"imgA"
+		"textB"
+		"imgB"
+		"textC"
+		"imgC"
+		"preorder"
+		"imgD";
+}
+
+@media (min-width: 900px){
+	#product-container {
+		grid-template-columns: 5fr 2fr 5fr;
+		grid-template-rows: repeat(4, 50vh);
+		grid-template-areas: 
+			"imgA textA textA"
+			"textB textB imgB"
+			"imgC textC textC"
+			"preorder preorder imgD";
+	}
+
+	#container {
+		grid-template-rows: 100vh 100vh 100vh 200vh auto;
+	}
+
+	#product-button1 {
+		display: none;
+	}
+}
+
+
+#product-img1 {
+	grid-area: imgA;
+	background-image: url("http://budeseo.com/wp-content/uploads/peaceful-design-wall-mounted-paper-organizer-living-room-special-large-size-hanging-magazine-or-bag-organizers-mount.jpg");
+}
+
+#product-img2 {
+	grid-area: imgB;
+	background-image: url("https://storage.jukeboxprint.com/s/images/colorplan-presentation-folders-with-silkscreen-printing.jpg");
+}
+
+#product-img3 {
+	grid-area: imgC;
+	background-image: url("https://storage.jukeboxprint.com/s/images/colorplan-presentation-folders-with-silkscreen-printing.jpg");
+}
+
+#product-img4 {
+	grid-area: imgD;
+	background-image: url("https://storage.jukeboxprint.com/s/images/colorplan-presentation-folders-with-silkscreen-printing.jpg");
+}
+
+#product-text1 {
+	grid-area: textA;
+}
+
+#product-text2 {
+	grid-area: textB;
+}
+
+#product-text3 {
+	grid-area: textC;
+}
+
+#product-text4 {
+	grid-area: preorder;
+}
+
+.product-text {
+	background-image: linear-gradient(to top, white, #F2F2F2);
+	color: #445d51;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-rows: 1fr auto 1fr;
+	padding: 0 1.5em;
+	overflow: hidden;
+}
+
+@media (min-width: 600px){
+	.product-text {
+		padding: 0 5em;
+	}
+}
+
+.product-img {
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+
+.product-text-container {
+	grid-row: 2 / 3;
+}
+
+#product-preorder-button {
+	background-color: #294234;
+	color: #97bda1;
+	border: 2px solid #97bda1;
+	padding: 1em;
+	font-size: 200%;
+	font-family: 'Staatliches', cursive;
+	text-decoration: none;
+}
+
+/* FOOTER */
+
+#footer {
+	grid-area: footer;
+	background-color: #294234;
+	width: 100%;
+	z-index: 5;
+	color: #97bda1;
+	text-align: center;
+	padding-top: 1em;
+	opacity: 0.95;
+}
+
+#footer i {
+	font-size: 250%;
+}
+
+#footer a {
+	color: inherit;
+}
+
+#icon-container {
+	display: grid;
+	grid-template-columns: 1fr auto auto auto 1fr;
+	grid-column-gap: 1em;
+}
+
+#icon-container a:nth-child(1) {
+	grid-column: 2 / 3;
+}
+
+#icon-container a:nth-child(2) {
+	grid-column: 3 / 4;
+}
+
+#icon-container a:nth-child(3) {
+	grid-column: 4 / 5;
+}
+
+/* ELSE */
+
+ .float-shadow{display:inline-block;vertical-align:middle;-webkit-transform:perspective(1px) translateZ(0);transform:perspective(1px) translateZ(0);box-shadow:0 0 1px rgba(0,0,0,0);position:relative;-webkit-transition-duration:.3s;transition-duration:.3s;-webkit-transition-property:transform;transition-property:transform}
+ .float-shadow:before{pointer-events:none;position:absolute;z-index:-1;content:'';top:100%;left:5%;height:10px;width:90%;opacity:0;background:-webkit-radial-gradient(center,ellipse,rgba(0,0,0,.35) 0,rgba(0,0,0,0) 80%);background:radial-gradient(ellipse at center,rgba(0,0,0,.35) 0,rgba(0,0,0,0) 80%);-webkit-transition-duration:.3s;transition-duration:.3s;-webkit-transition-property:transform,opacity;transition-property:transform,opacity}
+ .float-shadow:active,.float-shadow:focus,.float-shadow:hover{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+ .float-shadow:active:before,.float-shadow:focus:before,.float-shadow:hover:before{opacity:1;-webkit-transform:translateY(5px);transform:translateY(5px)}
