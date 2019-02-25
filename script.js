@@ -23,18 +23,3 @@ $('#product-button1').on('click', function(){
 });
 
 
-window.onscroll = function(){ scrollFunction(); };
-$('window').on('reload', scrollFunction());
-
-function scrollFunction(){
-	
-	if((document.body.scrollTop > $('#intro-container').offset().top) || (document.documentElement.scrollTop> $('#intro-container').offset().top)){
-		
-		document.getElementById("info-background-image").style.display = "inline";
-		
-	} else{
-		
-		document.getElementById("info-background-image").style.display = "none";
-	
-	}
-}
