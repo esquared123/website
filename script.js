@@ -1,10 +1,4 @@
 $('#landing-button').on('click', function(){
-	const nextPage = $('#intro-container').offset().top;
-
-	$('html, body').animate({ scrollTop: nextPage }, 1000);
-});
-
-$('#intro-button').on('click', function(){
 	const nextPage = $('#info-container').offset().top;
 
 	$('html, body').animate({ scrollTop: nextPage }, 1000);
