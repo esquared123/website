@@ -296,18 +296,18 @@ h3, h4 {
 
 #product-img1 {
 	grid-area: imgA;
-	background-image: url("pictures/_DSC1602.jpg");
+	background-image: url("pictures/products_pic1.jpg");
 	background-position: right;
 }
 
 #product-img2 {
 	grid-area: imgB;
-	background-image: url("pictures/_DSC1601.jpg");
+	background-image: url("pictures/products_pic2.jpg");
 }
 
 #product-img3 {
 	grid-area: imgC;
-	background-image: url("pictures/DSC_2900.jpg");
+	background-image: url("pictures/products_pic3.jpg");
 }
 
 #product-text1 {
@@ -382,7 +382,7 @@ h3, h4 {
 }
 
 #product-preorder-container {
-	background-image: url('pictures/_DSC1601.jpg');
+	background-image: url('pictures/products_pic2');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
