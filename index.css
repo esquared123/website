@@ -542,12 +542,16 @@ h3, h4 {
 
 #icon-container {
 	display: grid;
-	grid-template-columns: 1fr auto 1fr;
+	grid-template-columns: 1fr auto auto 1fr;
 	grid-column-gap: 1em;
 }
 
 #icon-container a:nth-child(1) {
 	grid-column: 2 / 3;
+}
+
+#icon-container a:nth-child(2) {
+	grid-column: 3 / 4;
 }
 
 /* ELSE */
